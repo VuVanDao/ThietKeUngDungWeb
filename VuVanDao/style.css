@@ -1,0 +1,77 @@
+body {
+  background-color: #f6fbff;
+}
+input {
+  padding: 5px;
+}
+.container {
+  width: 400px;
+  margin: 150px auto;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  background-color: #fff;
+}
+.content1 {
+  padding: 10px 10px;
+  border-bottom: 1px solid black;
+}
+.content1 h1,
+.content1 p {
+  margin: 10px 0;
+}
+.content2 {
+  padding: 10px;
+}
+form {
+  text-align: left;
+}
+.text-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.text-1 input {
+  width: 45%;
+}
+.phone-email,
+.password {
+  width: 97%;
+  margin-bottom: 10px;
+}
+.birth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.birth select {
+  width: 120px;
+  height: 30px;
+}
+.Gender {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.Gender div {
+  border: 1px solid black;
+  width: 28%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn {
+  margin: 30px auto;
+  text-align: center;
+}
+button {
+  border: none;
+  width: 200px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgba(1, 249, 22, 0.959);
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+}
