@@ -31,18 +31,3 @@ function myFunction(id) {
     })
     .catch((error) => console.error("Lỗi:", error));
 }
-const testFunction = (data) => {
-  console.log("Dữ liệu toàn bộ hàng:", data);
-  fetch("CRUD.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ rowData: data }),
-  })
-    .then((response) => response.text())
-    .then((result) => {
-      console.log("Phản hồi từ PHP:", result);
-    })
-    .catch((error) => console.error("Lỗi:", error));
-};
