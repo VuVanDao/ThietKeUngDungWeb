@@ -50,8 +50,8 @@
                   <input
                     type="text"
                     class="password"
-                    placeholder="Mã nhân viên"
-                    name="NoiSong"
+                    placeholder="Mã Nhân Viên"
+                    name="MaNhanVien"
                   />
                 </div>
                 <div>
@@ -59,7 +59,7 @@
                     type="text"
                     class="password"
                     placeholder="Nơi sống"
-                    name="MaNhanVien"
+                    name="NoiSong"
                   />
                 </div>
                 <div>

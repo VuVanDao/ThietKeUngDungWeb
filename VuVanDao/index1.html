@@ -4,111 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style1.css" />
+    <link rel="stylesheet" href="headerStyle.css" />
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <div style="width: 900px; margin: 0 auto">
-      <form action="CRUD.php" method="post">
-        <ol>
-          <li style="color: black">
-            Hãy cho chúng tôi biết về bản thân của bạn...
-            <div class="container">
-              <div class="data">
-                <label>
-                  Tên của tôi:
-                  <input type="text" placeholder="Tên họ" name="TenHo" />
-                  <input type="text" placeholder="Tên gọi" name="TenGoi" />
-                </label>
-              </div>
+    <header class="header fixed">
+      <div class="main-content">
+        <div class="body">
+          <!-- logo -->
+          <img
+            src="./img/Logo_Truong_Dai_hoc_Mo_-_Dia_chat-removebg-preview.png"
+            alt="Lesson"
+            class="logo"
+          />
+          <!-- nav-->
+          <nav class="nav">
+            <ul>
+              <li class="active">
+                <a href="#!">Trang chủ</a>
+              </li>
+              <li>
+                <a href="./CRUD.php">Bắt đầu</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- btn action -->
+          <div class="action">
+            <a href="#!" class="btn btn-sign-up">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero">
+      <div class="main-content">
+        <div class="body">
+          <!-- ========================================hero left ===========================================-->
+          <div class="media-block">
+            <img src="./img/poster.jpg" alt="guy-lesson" class="img" />
+          </div>
+          <!--=================================================== hero right ====================================================-->
+          <div class="content-block">
+            <h1 class="heading">Bài tập lớn Phát triển ứng dụng Web nhóm 4.</h1>
 
-              <div class="data">
-                <label for="gender">
-                  Giới tính:
-                  <select name="gender" id="gender">
-                    <option value="0">Chọn giới tính</option>
-                    <option value="Nam">Nam</option>
-                    <option value="Nữ">Nữ</option>
-                    <option value="khác">khác</option>
-                  </select>
-                </label>
-              </div>
+            <p class="desc">
+              Thành viên: Vũ Văn Đạo, Lê Minh Tuân, Lí Quang Huy, Phạm Quang
+              Điềm và 2 khứa nữa
+            </p>
 
-              <div for="" class="data">
-                Ngày tháng năm sinh:
+            <div class="cta-group">
+              <a href="./AddNewUser.php" class="btn btn-cta"> Khám phá </a>
 
-                <label for="">
-                  <select name="birth-day" id="birthday">
-                    <option value="0">chọn ngày</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="11">11</option>
-                  </select>
-                </label>
+              <button class="watch-video">
+                <div class="icon">
+                  <img src="./icon/Polygon 2.svg" alt="" />
+                </div>
 
-                <label for="">
-                  <select name="birth-month" id="birthmonth">
-                    <option value="0">chọn tháng</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                  </select>
-                </label>
-
-                <label for="">
-                  <select name="birth-year" id="birthyear">
-                    <option value="0">chọn năm</option>
-                    <option value="2024">2004</option>
-                    <option value="2023">2003</option>
-                    <option value="2022">2002</option>
-                  </select>
-                </label>
-              </div>
-              <div class="data">
-                <label for="">
-                  Tôi sống ở:
-                  <select name="location" id="location">
-                    <option selected value="vn">Việt Nam</option>
-                    <option value="en">England</option>
-                  </select>
-                </label>
-              </div>
-              <div class="data">
-                <label for="fax">
-                  Mã bưu chính:
-                  <input type="text" name="fax" id="fax" />
-                </label>
-              </div>
+                <span class="watch"> watch video </span>
+              </button>
             </div>
-          </li>
-          <li>
-            chọn ID và mật khẩu
-            <div class="container">
-              <div class="data">
-                <label for="email">
-                  Yahoo! ID và Email:
-                  <input type="text" name="email" id="email" />
-                  @yahoo.com.vn
-                </label>
-              </div>
-              <div class="data">
-                <label for="pass">
-                  Mật Khẩu:
-                  <input type="text" name="pass" id="pass" />
-                </label>
-              </div>
-              <div class="data">
-                <label for="re-pass">
-                  Đặt lại mật khẩu:
-                  <input type="text" name="re-pass" id="re-pass" />
-                </label>
-              </div>
-            </div>
-          </li>
-        </ol>
-        <input type="submit" value="submit" />
-      </form>
+
+            <p class="desc desc-recent">Recent engagement</p>
+
+            <p class="desc stat">
+              <strong>50K</strong> Students <strong>70+</strong> Courses
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <script src="./function.js"></script> -->
   </body>
 </html>
