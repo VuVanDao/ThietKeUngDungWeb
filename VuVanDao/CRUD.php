@@ -76,7 +76,7 @@ mysqLi_query($conn,$sql);
       <div class="main-content">
         <div class="body">
           <!-- logo -->
-          <a href="./index1.html"><img src="./img/Logo_Truong_Dai_hoc_Mo_-_Dia_chat-removebg-preview.png" alt="HUMG" class="logo" /></a>
+          <!-- <a href="./index1.html"><img src="./img/Logo_Truong_Dai_hoc_Mo_-_Dia_chat-removebg-preview.png" alt="HUMG" class="logo" /></a> -->
           <!-- nav-->
           <nav class="nav">
             <ul>
@@ -98,14 +98,14 @@ mysqLi_query($conn,$sql);
 
 <div class="hero">
   <div style="text-align: center;">
-        <h1>Danh sách thông tin nhân viên</h1>
+        <h1>Danh sách thông tin sinh viên</h1>
       </div>
   <div  class="all">
     <div style="text-align: center;font-size: 20px;margin-bottom:30px;" >
-          <button class="add" ><a href="./AddNewUser.php">Thêm nhân viên</a></button>
+          <button class="add" ><a href="./AddNewUser.php">Thêm sinh viên</a></button>
         </div>
     <div style="text-align: center;font-size: 20px;margin-bottom:30px;" >
-          <button class="delete" ><a href="./DeleteManageUser.php">Xoá nhân viên</a></button>
+          <button class="delete" ><a href="./DeleteManageUser.php">Xoá sinh viên</a></button>
         </div>
   </div>
   
@@ -113,9 +113,9 @@ mysqLi_query($conn,$sql);
     <form  method="POST" action="UpdateUser.php">
       <table >
         <tr>      
-          <th>Mã nhân viên</th>
-          <th>Ho</th>
-          <th>Ten</th>
+          <th>Mã sinh viên</th>
+          <th>Họ</th>
+          <th>Tên</th>
           <th>Sinh nhật</th>
           <th>Giới tính</th>
           <th>Nơi sống</th>

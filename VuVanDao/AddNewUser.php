@@ -4,13 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
+         <link rel="stylesheet" href="./css/NewStyle.css">
 </head>
  <body>
+   <header class="header fixed">
+      <div class="main-content">
+        <div class="body">
+          <!-- logo -->
+          <!-- <a href="./index1.html"><img src="./img/Logo_Truong_Dai_hoc_Mo_-_Dia_chat-removebg-preview.png" alt="HUMG" class="logo" /></a> -->
+          <!-- nav-->
+          <nav class="nav">
+            <ul>
+              <li class="active">
+                <a href="./index1.html">Trang chủ</a>
+              </li>
+              <li>
+                <a href="./CRUD.php">Bắt đầu</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- btn action -->
+          <div class="action">
+            <a href="#!" class="btn btn-sign-up">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </header>
         <form action="./Service/AddUser.php" method="post">
           <div class="container">
             <div class="content1">
-              <h1>Đăng kí</h1>
+              <h1>Đăng kí thông tin</h1>
               <p>Nhanh chóng và !dễ dàng</p>
             </div>
             <div class="content2">
@@ -20,13 +43,15 @@
                     type="text"
                     placeholder="họ"
                     class="ho"
-                    name="Ho"                   
+                    name="Ho"  
+                    oninput="checkInput()"                 
                   />
                   <input
                     type="text"
                     placeholder="tên"
                     class="ten"
-                    name="Ten"                  
+                    name="Ten"   
+                    oninput="checkInput()"                 
                   />
                 </div>
                 <label for="phone-email">
@@ -35,6 +60,7 @@
                     type="text"
                     placeholder="emaii"
                     name="Email"         
+                    oninput="checkInput()"  
                   />
                 </label>
 
@@ -44,22 +70,25 @@
                     class="password"
                     placeholder="password"
                     name="password"
+                    oninput="checkInput()"  
                   />
                 </div>
                 <div>
                   <input
                     type="text"
-                    class="password"
+                    class="password mnv"
                     placeholder="Mã Nhân Viên"
                     name="MaNhanVien"
+                    oninput="checkInput()"  
                   />
                 </div>
                 <div>
                   <input
                     type="text"
-                    class="password"
+                    class="password ns"
                     placeholder="Nơi sống"
                     name="NoiSong"
+                    oninput="checkInput()"  
                   />
                 </div>
                 <div>
@@ -67,7 +96,7 @@
                   <div class="birth">
                     <div>
                       <label for="">
-                        <select name="birth-day" id="birthday" onchange="myFunction('birthday')">
+                        <select name="birth-day" id="birthday" >
                         <?php
                             for($i=1;$i<=31;$i++){
                              ?>
@@ -80,7 +109,7 @@
                     </div>
                     <div>
                       <label for="">
-                        <select name="birth-month" id="birthmonth" onchange="myFunction('birthmonth')">
+                        <select name="birth-month" id="birthmonth" >
                           <?php
                             for($i=1;$i<=12;$i++){
                              ?>
@@ -93,7 +122,7 @@
                     </div>
                     <div>
                       <label for="">
-                        <select name="birth-year" id="birthyear" onchange="myFunction('birthyear')">
+                        <select name="birth-year" id="birthyear" >
                           <?php
                             for($i=2000;$i<=2024;$i++){
                              ?>
@@ -138,14 +167,15 @@
                         name="gender"
                         value="other"
                         class="check-gender"
+                        selected
                       />
                     </div>
                   </div>
                 </div>
-                <div class="btn"><button>Đăng kí</button></div>
+                <div class="btn1"><button id="btn" disabled>Đăng kí</button></div>
               </form>
             </div>
           </div>
-          <script src="function.js"></script>
+          <script src="./js/validate.js"></script>
       </body>
 </html>

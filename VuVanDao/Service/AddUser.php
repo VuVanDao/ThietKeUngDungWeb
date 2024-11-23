@@ -12,7 +12,7 @@ $NoiSong = $_POST['NoiSong'];
 $MaNhanVien=$_POST['MaNhanVien'];
 $email=$_POST['Email'];
 $pass = '11082004';
-if(isset($tenHo) || isset($tenGoi) ||isset($NgaySinh) ||isset($ThangSinh) ||isset($NamSinh) ||isset($GioiTinh) ||isset($MaNhanVien) ||isset($email) ||isset($pass) ){
+if(isset($tenHo) && isset($tenGoi) && isset($NgaySinh) && isset($ThangSinh) && isset($NamSinh) && isset($GioiTinh) && isset($MaNhanVien) ||isset($email) ||isset($pass) ){
 $sql = " INSERT INTO `yahoo` (`id`, `Ho`, `Ten`, `NgaySinh`, `ThangSinh`, `NamSinh`, `GioiTinh`, `NoiSong`, `MaNhanVien`, `Email`, `pass`) 
          VALUES (NULL, '$tenHo', '$tenGoi', $NgaySinh, $ThangSinh, $NamSinh, '$GioiTinh', '$NoiSong', '$MaNhanVien', '$email', '$pass');"; 
 mysqLi_query($conn,$sql);
