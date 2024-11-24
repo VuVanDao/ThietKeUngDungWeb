@@ -167,7 +167,6 @@
                         name="gender"
                         value="other"
                         class="check-gender"
-                        selected
                       />
                     </div>
                   </div>

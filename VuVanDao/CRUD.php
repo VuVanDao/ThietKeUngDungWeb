@@ -122,7 +122,7 @@ mysqLi_query($conn,$sql);
       <table >
         <tr>      
           <th>Mã sinh viên</th>
-          <th>Họ</th>
+          <th>Họ và tên đệm</th>
           <th>Tên</th>
           <th>Sinh nhật</th>
           <th>Giới tính</th>
