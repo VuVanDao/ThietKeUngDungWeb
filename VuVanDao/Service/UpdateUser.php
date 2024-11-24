@@ -4,22 +4,19 @@ $sql = 'SELECT * FROM yahoo';
 $id='';
 $tenHo=$_POST['Ho'];
 $tenGoi=$_POST['Ten'];
+$email = $_POST['Email'];
 $NgaySinh=$_POST['birth-day'];
 $ThangSinh=$_POST['birth-month'];
 $NamSinh=$_POST['birth-year'];
 $GioiTinh = $_POST['gender'];
 $NoiSong = $_POST['NoiSong'];
 $MaNhanVien=$_POST['MaNhanVien'];
-$email=$_POST['Email'];
-$pass = $_POST['password'];
-if(isset($tenHo) && isset($tenGoi) && isset($NgaySinh) && isset($ThangSinh) && isset($NamSinh) && isset($GioiTinh) && isset($MaNhanVien) ||isset($email) ||isset($pass) ){
-$sql = " INSERT INTO `yahoo` (`id`, `Ho`, `Ten`, `NgaySinh`, `ThangSinh`, `NamSinh`, `GioiTinh`, `NoiSong`, `MaNhanVien`, `Email`, `pass`) 
-         VALUES (NULL, '$tenHo', '$tenGoi', $NgaySinh, $ThangSinh, $NamSinh, '$GioiTinh', '$NoiSong', '$MaNhanVien', '$email', '$pass');"; 
+$sql = " UPDATE `yahoo` 
+         SET `Ho`='$tenHo',`Ten`='$tenGoi',`NgaySinh`='$NgaySinh',`ThangSinh`='$ThangSinh'
+         ,`NamSinh`='$NamSinh',`GioiTinh`='$GioiTinh',`NoiSong`='$NoiSong',`MaNhanVien`='$MaNhanVien'
+         ,`Email`='$email'
+         WHERE MaNhanVien = $MaNhanVien"; 
 mysqLi_query($conn,$sql);
-} else {
-    echo "siu";
-}
-
 
 ?>
 <!DOCTYPE html>

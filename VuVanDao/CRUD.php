@@ -35,6 +35,13 @@
     .delete a{
       color:red;
     }
+    .change{
+      color:green;
+      border:1px solid green;
+    }
+    .change a{
+      color:green;
+    }
     .container{
       padding: 0 50px;
     }
@@ -75,8 +82,6 @@ mysqLi_query($conn,$sql);
  <header class="header fixed">
       <div class="main-content">
         <div class="body">
-          <!-- logo -->
-          <!-- <a href="./index1.html"><img src="./img/Logo_Truong_Dai_hoc_Mo_-_Dia_chat-removebg-preview.png" alt="HUMG" class="logo" /></a> -->
           <!-- nav-->
           <nav class="nav">
             <ul>
@@ -90,7 +95,7 @@ mysqLi_query($conn,$sql);
           </nav>
           <!-- btn action -->
           <div class="action">
-            <a href="#!" class="btn btn-sign-up">Đăng nhập</a>
+            <a href="#!" class="btn btn-sign-up">Giới thiệu</a>
           </div>
         </div>
       </div>
@@ -106,6 +111,9 @@ mysqLi_query($conn,$sql);
         </div>
     <div style="text-align: center;font-size: 20px;margin-bottom:30px;" >
           <button class="delete" ><a href="./DeleteManageUser.php">Xoá sinh viên</a></button>
+        </div>
+    <div style="text-align: center;font-size: 20px;margin-bottom:30px;" >
+          <button class="change" ><a href="./UpdateUser.php">Sửa thông tin</a></button>
         </div>
   </div>
   

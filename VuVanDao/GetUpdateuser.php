@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-         <link rel="stylesheet" href="./css/NewStyle.css">
-</head>
- <body>
-   <header class="header fixed">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+             <link rel="stylesheet" href="./css/NewStyle.css">
+    <style>
+      .update-error {
+        width: 500px;
+        height: 500px;
+        border: 2px solid;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body >
+    <?php 
+          include "connect.php";
+         $MaNhanVien=$_POST['MaNhanVien'];
+         $sql = "SELECT * FROM `yahoo` WHERE MaNhanVien = $MaNhanVien;";
+               $result =  mysqLi_query($conn,$sql);
+         if (!$result || mysqli_affected_rows($conn) < 0) {
+                echo "Lỗi truy vấn hoặc không có kết quả " ;
+                } else {            
+               while($data = mysqLi_fetch_array($result)){    
+    ?>
+    <header class="header fixed">
       <div class="main-content">
         <div class="body">
-          <!-- logo -->
-          <!-- <a href="./index1.html"><img src="./img/Logo_Truong_Dai_hoc_Mo_-_Dia_chat-removebg-preview.png" alt="HUMG" class="logo" /></a> -->
-          <!-- nav-->
           <nav class="nav">
             <ul>
               <li class="active">
@@ -30,10 +45,10 @@
         </div>
       </div>
     </header>
-        <form action="./Service/AddUser.php" method="post">
-          <div class="container">
+          <form action="./Service/UpdateUser.php" method="post">
+              <div class="container">
             <div class="content1">
-              <h1>Đăng kí thông tin</h1>
+              <h1>Chỉnh sửa thông tin</h1>
               <p>Nhanh chóng và !dễ dàng</p>
             </div>
             <div class="content2">
@@ -44,14 +59,16 @@
                     placeholder="họ"
                     class="ho"
                     name="Ho"  
-                    oninput="checkInput()"                 
+                    value=<?php echo $data["Ho"]?>
+                    oninput="checkUpdateInput()"                 
                   />
                   <input
                     type="text"
                     placeholder="tên"
                     class="ten"
-                    name="Ten"   
-                    oninput="checkInput()"                 
+                    name="Ten"
+                    value=<?php echo $data["Ten"]?>   
+                    oninput="checkUpdateInput()"                 
                   />
                 </div>
                 <label for="phone-email">
@@ -59,8 +76,9 @@
                     class="phone-email"
                     type="text"
                     placeholder="emaii"
-                    name="Email"         
-                    oninput="checkInput()"  
+                    name="Email"       
+                    value=<?php echo $data["Email"]?>  
+                    oninput="checkUpdateInput()"  
                   />
                 </label>
 
@@ -70,7 +88,7 @@
                     class="password"
                     placeholder="password"
                     name="password"
-                    oninput="checkInput()"  
+                    disabled 
                   />
                 </div>
                 <div>
@@ -79,7 +97,8 @@
                     class="password mnv"
                     placeholder="Mã Nhân Viên"
                     name="MaNhanVien"
-                    oninput="checkInput()"  
+                    value=<?php echo $data["MaNhanVien"]?>
+                    oninput="checkUpdateInput()"  
                   />
                 </div>
                 <div>
@@ -88,7 +107,8 @@
                     class="password ns"
                     placeholder="Nơi sống"
                     name="NoiSong"
-                    oninput="checkInput()"  
+                    value=<?php echo $data["NoiSong"]?>
+                    oninput="checkUpdateInput()"  
                   />
                 </div>
                 <div>
@@ -172,11 +192,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="btn1"><button id="btn" disabled>Đăng kí</button></div>
+                <div class="btn1"><button id="btn" disabled>Hoàn thành</button></div>
               </form>
             </div>
           </div>
-          
+          </form>
+  <?php }}?>
           <script src="./js/validate.js"></script>
-      </body>
+  </body>
 </html>

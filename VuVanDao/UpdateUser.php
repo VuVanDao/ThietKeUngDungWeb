@@ -31,19 +31,19 @@
       </div>
     </header>
 
-        <form action="./Service/DeleteUser.php" method="post">
+        <form action="./GetUpdateUser.php" method="post">
           <div class="container">         
             <div class="content2">
               <form action="" id="form">    
                 <div class="content1">
-              <h1>Xoá người dùng (xoá bằng mã nhân viên )</h1>
+              <h1>Chỉnh sửa thông tin </h1>
               <p>!Nhanh chóng và !dễ dàng</p>
             </div>          
                 <div>
                   <input
                     type="text"
                     class="password mnv"
-                    placeholder="Mã nhân viên muốn xoá"
+                    placeholder="Mã sinh viên"
                     name="MaNhanVien"
                     oninput="CheckDelete()"
                   />
