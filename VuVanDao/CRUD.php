@@ -54,6 +54,10 @@
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:150px;
    }
 
   tr:nth-child(even) {
@@ -95,7 +99,7 @@ mysqLi_query($conn,$sql);
           </nav>
           <!-- btn action -->
           <div class="action">
-            <a href="#!" class="btn btn-sign-up">Giới thiệu</a>
+            <a href="./introduce/Member.html" class="btn btn-sign-up">Giới thiệu</a>
           </div>
         </div>
       </div>
